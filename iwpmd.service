@@ -1,0 +1,12 @@
+[Unit]
+Description=Starts the IWPMD daemon
+Documentation=file:///usr/share/doc/iwpmd/README
+After=network.target syslog.target
+
+[Service]
+Type=simple
+LimitNOFILE=102400
+ExecStart=/usr/bin/iwpmd
+
+[Install]
+WantedBy=multi-user.target
